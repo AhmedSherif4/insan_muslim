@@ -1,0 +1,37 @@
+{
+  "editPrayersTime":"عدّل مواقيت الصلاة",
+  "done":"تم!",
+  "fajr":"الفجر",
+  "dzuhr":"الضهر",
+  "asr":"العصر",
+  "maghrib":"المغرب",
+  "isha":"العشاء",
+  "retry":"حاول مجددًا",
+  "locationServicePermissionDenied":"تم رفض إذن خدمة الموقع",
+  "yourDeviceIsNotSupported":"جهازك لا يدعم تلك الخاصية",
+  "locationServiceDeniedForever":"رفض خدمة الموقع إلى الأبد!",
+  "pleaseEnableLocationService":"الرجاء تمكين خدمة الموقع",
+  "noInternetConnection":"لا يوجد إتصال بالإنترنت!",
+
+
+
+  "no_route_found": "لا توجد شاشه",
+  "password_error" : "من فضلك ادخل الرقم السري",
+  "passwordStrengthIsShort" : "الرقم السري ضعيف جدًا",
+  "passwordStrengthIsAcceptable" : "الرقم السري مقبول ولكن ليس قوي",
+  "passwordStrengthIsStrong" : "الرقم السري قوي",
+  "passwordStrengthIsGreat" : "الرقم السري قوي جدًا",
+
+  "bad_request_error": "طلب غير صالح. حاول مرة أخرى لاحقًا",
+  "no_content": "تم النجاح بدون اتصال",
+  "forbidden_error": "طلب محظور. حاول مرة أخرى لاحقًا",
+  "unauthorized_error": "مستخدم غير مصرح له , حاول مرة أخرى لاحقًا",
+  "not_found_error": "url غير موجود , حاول مرة أخرى لاحقًا",
+  "conflict_error": "تم العثور على تعارض , حاول مرة أخرى لاحقًا",
+  "Internal_server_error": "حدث خطأ ما , حاول مرة أخرى لاحقًا",
+  "unknown_error": "حدث خطأ ما , حاول مرة أخرى لاحقًا",
+  "timeout_error": "انتهت المهلة , حاول مرة أخرى متأخرًا",
+  "default_error": "حدث خطأ ما , حاول مرة أخرى لاحقًا",
+  "cache_error": "خطأ في ذاكرة التخزين المؤقت , حاول مرة أخرى لاحقًا",
+  "no_internet_error": "يُرجى التحقق من اتصالك بالإنترنت"
+}
