@@ -36,12 +36,5 @@ class QuranCubit extends Cubit<QuranState> {
     );
   }
 
-  double getFontSize = 20;
 
-  setFontSize(double fontSize) {
-    getFontSize = fontSize;
-    emit(state.copyWith(
-      requestStates: RequestStates.changeFontSize,
-    ));
-  }
 }

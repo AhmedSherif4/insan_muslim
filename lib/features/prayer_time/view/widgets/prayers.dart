@@ -14,6 +14,7 @@ class PrayersWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<PrayerTimeCubit, PrayerTimeState>(
       builder: (context, state) => Wrap(
+        crossAxisAlignment: WrapCrossAlignment.center,
         spacing: ResponsiveManager.getSize(AppSize.s10),
         alignment: WrapAlignment.center,
         children: [

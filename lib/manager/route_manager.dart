@@ -22,7 +22,7 @@ class RouteGenerator {
       case Routes.prayerTimeRoute:
         return MaterialPageRoute(builder: (_) =>  PrayerTimeView());
       case Routes.qiblahRoute:
-        return MaterialPageRoute(builder: (_) =>  QiblahView());
+        return MaterialPageRoute(builder: (_) =>  const QiblahView());
       case Routes.quranRoute:
         return MaterialPageRoute(builder: (_) => const QuranView());
       default:

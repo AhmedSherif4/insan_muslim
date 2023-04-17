@@ -103,7 +103,7 @@ mixin SubThemeData {
           color: ColorManager.white,
         ),
         displayLarge: TextStyle(
-          fontSize: ResponsiveManager.getFontSize(FontSize.s20),
+          fontSize: ResponsiveManager.getFontSize(20),
           fontWeight: FontWeight.bold,
           fontStyle: FontStyle.normal,
           color: colorDependOnTheme,

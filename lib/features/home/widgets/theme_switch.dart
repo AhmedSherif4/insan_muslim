@@ -13,7 +13,7 @@ class ThemeSwitchWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<ThemeCubit, ThemeState>(builder: (context, state) {
       final ThemeCubit themeCubit = BlocProvider.of<ThemeCubit>(context);
-      return Switch(
+      return Switch.adaptive(
         value: themeCubit.getThemeMode(),
         onChanged: (isDark) {
           themeCubit.isDark(isDark);

@@ -5,8 +5,8 @@ import 'package:flutter_phoenix/flutter_phoenix.dart';
 
 import 'application/app.dart';
 import 'application/dependency_injection.dart';
-import 'utils/counter_observer.dart';
 import 'manager/localization/language_manager.dart';
+import 'utils/counter_observer.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,11 +18,12 @@ void main() async {
 
   runApp(
     EasyLocalization(
-      supportedLocales: const [arabicLocale, englishLocale],
-      path: assetPathLocalization,
-      child: Phoenix(
-        child: MyApp(),
-      ),
-    ),
+        supportedLocales: const [arabicLocale, englishLocale],
+        path: assetPathLocalization,
+        child: Phoenix(
+          child: MyApp(),
+        ),
+      ), // Wrap your app
+    
   );
 }

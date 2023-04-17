@@ -23,7 +23,7 @@ class QuranRemoteDataSourceImpl implements QuranRemoteDataSource {
 
     try {
       final response = await client
-          .get(urlAsUri, headers: {'Content-type': 'application/json'});
+          .get(urlAsUri);
       Map<String, dynamic> jsonMap = json.decode(response.body);
 
       if (response.statusCode == 200) {

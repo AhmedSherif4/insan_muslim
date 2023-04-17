@@ -3,7 +3,6 @@ import 'package:http/http.dart';
 import 'package:insan_muslim/features/prayer_time/data_source/local_data_source.dart';
 import 'package:insan_muslim/features/quran/model/data_source/remote_data_source.dart';
 import 'package:insan_muslim/features/quran/view_model/cubit/quran_cubit.dart';
-import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../features/home/controller/cubit/home_cubit.dart';
@@ -11,7 +10,6 @@ import '../features/prayer_time/cubit/prayer_time_cubit.dart';
 import '../features/quran/view_model/repository/quran_repository.dart';
 import '../manager/localization/localization_cubit/localization_cubit.dart';
 import '../manager/material_design/theme/theme_cubit/theme_cubit.dart';
-import '../manager/network/network_info.dart';
 import 'app_preferences.dart';
 
 final instanceGetIt = GetIt.instance;
@@ -36,11 +34,6 @@ Future<void> initAppModule() async {
   Client client = Client();
   instanceGetIt.registerLazySingleton<Client>(() => client);
 
-  // internet checker
-  instanceGetIt.registerLazySingleton<InternetConnectionChecker>(
-      () => InternetConnectionChecker());
-  instanceGetIt.registerLazySingleton<NetworkInfo>(
-      () => NetworkInfoImpl(instanceGetIt()));
 
 // repo of quran
   instanceGetIt.registerLazySingleton<QuranRemoteDataSource>(
@@ -48,7 +41,7 @@ Future<void> initAppModule() async {
             instanceGetIt(),
           ));
   instanceGetIt.registerLazySingleton<QuranBaseRepository>(
-      () => QuranRepository(instanceGetIt(), instanceGetIt()));
+      () => QuranRepository(instanceGetIt()));
 
   // cubit
   instanceGetIt.registerFactory<ThemeCubit>(() => ThemeCubit(instanceGetIt()));

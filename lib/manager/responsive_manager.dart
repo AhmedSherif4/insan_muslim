@@ -27,5 +27,5 @@ class ResponsiveManager {
   }
 
   /// for text font size.
-  static double getFontSize(double px) => getSize(px);
+  static double getFontSize(double px) => getHorizontalSize(px);
 }

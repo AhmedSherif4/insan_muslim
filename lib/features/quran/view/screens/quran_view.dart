@@ -14,6 +14,7 @@ class QuranView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: BlocConsumer<QuranCubit, QuranState>(
         listener: (context, state) {
           if (state.requestStates == RequestStates.error) {
@@ -32,11 +33,9 @@ class QuranView extends StatelessWidget {
             case RequestStates.loading:
               return const LoadingWidget();
             case RequestStates.loaded:
-            case RequestStates.changeFontSize:
               return QuranPage(
                 pageOfQuranModel: state.pageOfQuranModel,
               );
-            
           }
         },
       ),

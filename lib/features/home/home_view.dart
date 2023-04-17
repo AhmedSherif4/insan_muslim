@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:insan_muslim/features/quran/view_model/cubit/quran_cubit.dart';
 
 import '../../manager/assets_manager.dart';
 import '../../manager/material_design/color_manager.dart';
@@ -9,6 +8,7 @@ import '../../manager/route_manager.dart';
 import '../../manager/value_manager.dart';
 import '../prayer_time/view/screens/prayer_time_view.dart';
 import '../qiblah/view/screens/qiblah_view.dart';
+import '../quran/view_model/cubit/quran_cubit.dart';
 import 'controller/cubit/home_cubit.dart';
 import 'widgets/locale_switch.dart';
 import 'widgets/tab_button.dart';
@@ -40,7 +40,7 @@ class HomeView extends StatelessWidget {
         ),
         child: IndexedStack(
           index: selectedTab.index,
-          children: [PrayerTimeView(), QiblahView()],
+          children: [PrayerTimeView(), const QiblahView()],
         ),
       )),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -48,8 +48,8 @@ class HomeView extends StatelessWidget {
         backgroundColor: ColorManager.white,
         elevation: 10,
         shape: const CircleBorder(),
-        onPressed: () async {
-          await context.read<QuranCubit>().getQuran(1);
+        onPressed: ()  async{
+        await context.read<QuranCubit>().getQuran(1);
           if (context.mounted) {
             Navigator.pushNamed(context, Routes.quranRoute);
           }

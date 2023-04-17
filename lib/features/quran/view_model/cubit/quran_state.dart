@@ -1,6 +1,6 @@
 part of 'quran_cubit.dart';
 
-enum RequestStates { loading, loaded, error, changeFontSize }
+enum RequestStates { loading, loaded, error }
 
 class QuranState extends Equatable {
   final RequestStates requestStates;
