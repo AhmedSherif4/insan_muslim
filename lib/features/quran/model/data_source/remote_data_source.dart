@@ -2,6 +2,7 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
+import 'package:insan_muslim/manager/string_manager.dart';
 
 import '../../../../application/constants.dart';
 import '../../../../application/handle_errors/exeptions.dart';
@@ -22,8 +23,7 @@ class QuranRemoteDataSourceImpl implements QuranRemoteDataSource {
         Uri.parse('${Constants.baseUrl}/page/$pageNumber/quran-uthmani');
 
     try {
-      final response = await client
-          .get(urlAsUri);
+      final response = await client.get(urlAsUri);
       Map<String, dynamic> jsonMap = json.decode(response.body);
 
       if (response.statusCode == 200) {
@@ -40,10 +40,10 @@ class QuranRemoteDataSourceImpl implements QuranRemoteDataSource {
           errorMessage: jsonMap['status'],
         );
       }
-    } on Exception catch (error) {
+    } on Exception {
       throw ServerException(
         errorCode: 404,
-        errorMessage: error.toString(),
+        errorMessage: AppStrings.internalServerError,
       );
     }
   }

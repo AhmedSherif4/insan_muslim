@@ -20,9 +20,8 @@ class QuranRepository implements QuranBaseRepository {
 
   @override
   Future<Either<Failure, List<AyahModel>>> getQuran(int pageNumber) async {
-    final data = await _dataSource.getQuran(pageNumber);
-
     try {
+      final data = await _dataSource.getQuran(pageNumber);
       return Right(data);
     } on ServerException catch (error) {
       return Left(ServerFailure(message: error.errorMessage));
